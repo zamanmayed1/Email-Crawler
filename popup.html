@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Crawler</title>
+    <style>
+        body {
+            background-color: #fefefe;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            width: 450px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .button,
+        .clear-button {
+            color: white;
+            padding: 10px 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        .button {
+            background: linear-gradient(145deg, #34c759, #30b757);
+        }
+
+        .button:hover {
+            background: linear-gradient(145deg, #30b757, #34c759);
+            transform: scale(1.05);
+        }
+
+        .clear-button {
+            background: linear-gradient(145deg, #ff3b30, #e6392b);
+        }
+
+        .clear-button:hover {
+            background: linear-gradient(145deg, #e6392b, #ff3b30);
+            transform: scale(1.05);
+        }
+
+        .email-list {
+            max-height: 256px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .email-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+        }
+
+        .email-text {
+            color: #333333;
+            flex: 1;
+        }
+
+        .copy-button {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            background-color: #f2f2f2;
+            transition: background-color 0.2s ease;
+        }
+
+        .copy-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .copy-button img {
+            height: 16px;
+            width: 16px;
+        }
+
+        .no-emails {
+            color: #8e8e93;
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .no-emails.show {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Collected Emails</h1>
+        <button id="export-all" class="button" aria-label="Export all emails">Export All</button>
+        <button id="clear-all" class="clear-button" aria-label="Clear all emails">Clear All</button>
+    </div>
+    <div id="email-list" class="email-list" role="list">
+        <!-- List of emails will be dynamically injected here -->
+    </div>
+    <p id="no-emails" class="no-emails">No emails collected yet.</p>
+</body>
+<script src="popup.js"></script>
+
+</html>

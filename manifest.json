@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Email Crawler",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/copy-icon.png",
+    "48": "icons/copy-icon.png",
+    "128": "icons/copy-icon.png"
+  }
+}
