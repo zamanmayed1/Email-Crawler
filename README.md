@@ -14,7 +14,7 @@ Follow these steps to download and set up the Email Crawler extension on Chrome:
 
 ### 1. Download the Extension
 
-- Download the project as a `.zip` file from the GitHub repository.
+- [Download Now](https://github.com/zamanmayed1/Email-Crawler/archive/refs/heads/main.zip) the project as a `.zip` file from the GitHub repository.
 - Extract the `.zip` file to a location on your computer.
 
 ### 2. Load the Extension in Chrome
